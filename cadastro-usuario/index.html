@@ -12,7 +12,7 @@
     <div class="container mt-5">
         <div class="row justify-content-center">
             <div class="col-md-6">
-                <form>
+                <form id="cadastroForm">
                     <h1 class="text-center">Cadastro</h1>
                     <!-- Formulário -->
                     <div class="form-group">
@@ -31,14 +31,25 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="inputSenha">Telefone:</label>
-                        <input type="text" class="form-control telefone" id="inputTelefone" placeholder="Digite seu telefone">
+                        <label for="inputTelefone">Telefone:</label>
+                        <input type="text" class="form-control telefone" id="inputTelefone" placeholder="Digite seu telefone" maxlength="15">
                     </div>
 
                     <div class="d-grid gap-2 col-6 mx-auto">
-                        <button type="submit" class="btn btn-primary mt-2">Cadastrar</button>
+                        <button id="btnCadastrar" type="submit" class="btn btn-primary mt-2 mb-2">Cadastrar</button>
                     </div>
+
                 </form>
+
+                <div class="alert alert-danger mt-3" id="alerta-campos-vazios" style="display: none;">
+                    Preencha todos os campos antes de enviar o formulário.
+                </div>
+                <div class="alert alert-success mt-3" id="alerta-sucesso" style="display: none;">
+                    Cadastro efetuado com sucesso!
+                </div>
+                <div class="alert alert-danger mt-3" id="alerta-erro" style="display: none;">
+                    Ocorreu um erro ao cadastrar o usuário.
+                </div>
             </div>
         </div>
     </div>
@@ -50,5 +61,10 @@
 <link rel="stylesheet" href="css/style.css">
 <script src="js/bootstrap.min.js"></script>
 <script src="js/script.js" defer></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+
+
 
 </html>
